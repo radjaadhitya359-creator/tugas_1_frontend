@@ -1,0 +1,303 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f2f4f7;
+    color: #2d3a40;
+    line-height: 1.6;
+    padding: 30px 20px;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #dce2e7;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #2468a9, #174b87);
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #b9ddff;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #f3f6f8, #e8eef3);
+}
+
+.hero h1 {
+    font-size: clamp(28px, 4vw, 38px);
+    line-height: 1.25;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    max-width: 850px;
+    font-size: 14px;
+    color: #45545d;
+}
+
+/* MAIN CONTENT - FLEXBOX */
+.main-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 28px 24px;
+}
+
+/* ARTICLES */
+.articles {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    gap: 16px;
+}
+
+/* CARD */
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+/* KOTAK GAMBAR */
+.card-image {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background: #d9e0e5;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* GAMBAR DI ATAS HEADING */
+.card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.35s ease;
+}
+
+/* EFEK HOVER */
+.card-image:hover img {
+    transform: scale(1.06);
+}
+
+/* JUDUL ARTIKEL */
+.card h2 {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    color: #293840;
+}
+
+/* DESKRIPSI ARTIKEL */
+.card p {
+    font-size: 13px;
+    line-height: 1.75;
+    color: #45515a;
+    overflow-wrap: anywhere;
+}
+
+/* SIDEBAR */
+.sidebar {
+    flex: 0 0 25%;
+    min-width: 0;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.sidebar p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #45515a;
+    overflow-wrap: anywhere;
+}
+
+/* FOOTER */
+.footer {
+    margin: 0 24px;
+    padding: 14px 0;
+    border-top: 1px solid #e3e8ec;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 12px;
+    color: #637078;
+}
+
+/* TABLET */
+@media (max-width: 800px) {
+    body {
+        padding: 20px 14px;
+    }
+
+    .main-content {
+        gap: 20px;
+        padding: 24px 18px;
+    }
+
+    .articles {
+        gap: 12px;
+    }
+
+    .card-image {
+        height: 120px;
+    }
+
+    .card h2 {
+        font-size: 15px;
+    }
+
+    .card p,
+    .sidebar p {
+        font-size: 12px;
+    }
+
+    .sidebar {
+        flex-basis: 25%;
+    }
+
+    .hero {
+        padding: 30px 24px;
+    }
+}
+
+/* HP */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 20px;
+    }
+
+    .nav-menu {
+        width: 100%;
+        gap: 22px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 28px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        padding: 22px 18px;
+    }
+
+    .articles {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 24px 14px;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 14px);
+    }
+
+    .card-image {
+        height: 150px;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex: 1 1 auto;
+        padding-top: 18px;
+        border-top: 1px solid #e3e8ec;
+    }
+
+    .footer {
+        margin: 0 18px;
+    }
+}
+
+/* HP SANGAT KECIL */
+@media (max-width: 380px) {
+    .articles {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        flex: 1 1 auto;
+    }
+
+    .card-image {
+        height: 190px;
+    }
+}
